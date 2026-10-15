@@ -179,6 +179,9 @@
 
   jQuery(document).ready(function ($) {
     var $nav = $(".is-style-saaslauncher-sticky-navigation");
+    if (!$nav.length) {
+      return;
+    }
     var offset = $nav.offset().top;
 
     $(window).on("scroll", function () {
